@@ -1,0 +1,69 @@
+<div style="margin-top:10%">
+  <h1 style="color:#b29b6f ;text-align: center;">Admin Portal</h1>
+  <hr />
+  <div style="margin-left: 40%;">
+
+<!-- jhgkjhjk -->
+    <form>
+      <div class="form-group">
+        <h2>Brand Name</h2>
+        <ns-textField name="title" class="textfieldBorderColor  font13" [rformgroup]="newBrandForm"
+          rformControlName="title">
+        </ns-textField>
+
+
+      </div>
+      <div class="form-group">
+        <h2>Brand Price</h2>
+        <ns-textField name="price" type="number" class="textfieldBorderColor  font13" [rformgroup]="newBrandForm"
+          rformControlName="price">
+        </ns-textField>
+
+      </div>
+      <div class="form-group">
+
+
+
+        <div class="form-group">
+          <h2>Sample no</h2>
+          <ns-textField name="sample" class="textfieldBorderColor  font13" [rformgroup]="newBrandForm"
+            rformControlName="sample">
+          </ns-textField>
+
+
+        </div>
+      </div>
+      <div class="form-group">
+        <h2>Main Image</h2>
+
+        <div class="form-group">
+
+          <input style="float: left;width: 30%;" type="file" name="mainImage" (change)="selectCampaignImage($event)"
+            class="form-control" /><br>
+        </div>
+
+
+      </div>
+
+
+      <div style="margin: 5%;">
+        <mat-form-field [formGroup]="newBrandForm">
+          <mat-label>Catagory</mat-label>
+          <mat-select formControlName="type">
+            <mat-option *ngFor="let type of ['New arrival','Shoes','Kurtas','Lehanga','Shalwar Qameez']" [value]="type">
+              {{type}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+
+
+    </form>
+    <button (click)='newBrand()' type=" submit" style="color: #b29b6f;width:200px;height: 40px;margin-top: 2%;"
+      >Launch a Brand</button>
+
+  </div>
+
+</div>

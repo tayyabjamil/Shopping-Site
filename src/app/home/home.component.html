@@ -1,0 +1,221 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light  shadow fixed-top" >
+  <div style="width: 100%" >
+
+
+    <div  class="collapse navbar-collapse" id="navbarResponsive">
+      <a routerLink="/home"    ><img src="../assets/aagolden.png"  width="90px" alt=""></a>
+      <a routerLink="/home"     style="padding-left: 30px;" ><strong>Home</strong></a>
+      <a  (click)="search('New arrival')" style="padding-left: 30px" ><strong>New arrival</strong></a>
+      <a  (click)="search('Shoes')" style="padding-left: 30px" ><strong>Shoes</strong></a>
+      <a  (click)="search('Kurtas')" style="padding-left: 30px" ><strong>Kurtas</strong></a>
+      <a  (click)="search('Lehanga')" style="padding-left: 30px" ><strong>Lehanga</strong></a>
+      <a  (click)="search('Shalwar Qameez')" style="padding-left: 30px" ><strong>Shalwar Qameez</strong></a>
+
+      <a routerLink="/cart"    style="padding-left: 25%;">
+        <img src="../assets/shopping-bag.png"  width="30px" alt=""><strong>Cart</strong></a>
+    
+
+      <a routerLink="/createAccount" *ngIf="!authService.loggedIn()"  style="padding-left: 30px" ><strong>createAccount </strong></a>
+      <a routerLink="/login"  *ngIf="!authService.loggedIn()"  style="padding-left: 30px;"><strong>Login </strong></a>
+      <a routerLink="/logout" *ngIf="authService.loggedIn()"  (click)="onLogoutClick()" style="padding-left: 30px;"><strong>Logout </strong></a>
+
+   
+    </div >
+  </div>
+</nav>
+
+
+<div>
+
+  <header class="masthead">
+    <div style="width: 100%;height: 100%;">
+      <div class="row">
+
+        <div class="col" >
+       <img  style="margin-top: 5%;width: 100%;" height="800px" src="../assets/Roxanne-Lawn Collection-Serene Premium-page-016.jpg">
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <div style="margin-top: 20%;background-color: rgb(231, 231, 231);">
+    <div style="margin-left:5% ; height: 25px;">
+
+      <strong >For Nationwide Shipping :</strong > get free shipping with our Special Service and not redeemable for cash or credit See
+      Details
+    </div>
+  </div>
+  <div  class="containerflex">
+    <div class="container"   *ngFor="let data of filterData">
+
+<img [src]="'../assets/'+ data.image">
+    <button class="btnSale">Sale</button>
+    <button class="btn" (click)="select(data)">Add to Cart</button>
+<div style="text-align: center;">
+     <p style="font-size: large;font-weight: bold;">{{data?.title}}</p>
+    <p >Sample no  {{data?.sample}}</p>
+    <p >Price  {{data?.price}}</p>
+  </div>
+
+  </div>
+  </div>
+
+<div style="text-align: center;">
+  <strong>Markting Tag-Line</strong>
+</div>
+<div style="text-align: center;">
+Follow  <strong>@AAClothing</strong>  for inspiration
+</div>
+</div>
+
+<div class="row" style="height: 120px;">
+ <div class="col" style="width: 100%;" >
+  <img style="width: 100%;" src="assets/Roxanne-Lawn Collection-Serene Premium-page-013.jpg">
+
+ </div>
+ <div class="col">
+  <img style="width: 100%;" src="../assets/Roxanne-Lawn Collection-Serene Premium-page-016.jpg">
+ </div>
+ <div class="col">
+  <img style="width: 100%;" src="../assets/Roxanne-Lawn Collection-Serene Premium-page-017.jpg">
+ </div>
+ <div class="col">
+  <img style="width: 100%;" src="../assets/Roxanne-Lawn Collection-Serene Premium-page-022.jpg">
+ </div>
+ <div class="col">
+  <img style="width: 100%;" src="../assets/Roxanne-Lawn Collection-Serene Premium-page-023.jpg">
+ </div>
+ <div class="col">
+  <img style="width: 100%;" src="../assets/Roxanne-Lawn Collection-Serene Premium-page-022.jpg">
+ </div>
+
+</div>
+
+<hr style="margin-top: 2%;margin-left: 2%;margin-right: 2%">
+<div style="text-align: center;">
+ <strong>  Instagram</strong> <strong>   twiter</strong><strong>   FaceBook</strong>
+</div>
+<div class="containerImage">
+
+  <img src="../assets/Roxanne-Lawn Collection-Serene Premium-page-023.jpg">
+  <!-- <button class="ReadMore">ReadMore</button> -->
+  <button class="ReadMore">ReadMore</button>
+<div class="label">
+AA Clothung
+<div>
+  <strong>Article or any upcoming promotion</strong>
+</div>
+</div>
+
+</div>
+<div >
+  <div class="row">
+
+    <div class="col-lg-6">
+
+      <div class="containerRow1">
+
+        <img src="../assets/Roxanne-Lawn Collection-Serene Premium-page-032.jpg">
+
+        <button class="btn">ReadMore</button>
+      <div class="label">
+      AA Clothung
+      <div>
+        <strong>Article or any upcoming promotion</strong>
+      </div>
+      </div>
+
+      </div>
+
+    </div>
+    <div class="col-sm-3">
+      <div class="containerRow2">
+
+        <img  src="../assets/sc-02.png">
+
+        <button class="btn">ReadMore</button>
+      <div class="label">
+      AA Clothung
+      <div>
+        <strong>Location for your Outlets</strong>
+      </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="containerRow3">
+
+        <img src="../assets/Roxanne-Lawn Collection-Serene Premium-page-027.jpg">
+        <!-- <button class="ReadMore">ReadMore</button> -->
+        <button class="btn">Read More</button>
+      <div class="label">
+      AA Clothung
+      <h4>
+        <strong>Company Value</strong>
+      </h4>
+      </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+<div style="margin:3%" class="row">
+<div class="col-lg-3" style="text-align: center;color:black;padding:40px">
+  <img style="height: 30;" width="30" src="../assets/iconfinder_multimedia-01_2849835.png">
+  <strong>Cash on Delivery</strong>
+<div>Free shipping on orders over Rs5000</div>
+</div>
+<div class="col-lg-3" style="text-align: center;color:black;padding:40px">
+  <img style="height: 30;" width="30" src="../assets/iconfinder_multimedia-07_2849829.png">
+  <strong>Free Return</strong>
+  <div>3 day free return policy</div>
+</div>
+<div class="col-lg-3" style="text-align: center;color:black;padding:40px">
+  <img  style="height: 30;" width="30" src="../assets/iconfinder_multimedia-09_2849827.png">
+  <strong>Secured Payment</strong>
+  <div>We accept all major Credit Cards</div>
+</div>
+<div class="col-lg-3" style="text-align: center;color:black;padding:40px">
+  <img  style="height: 30;" width="30" src="../assets/iconfinder_multimedia-36_2849800.png">
+  <strong>Customer Service</strong>
+  <div>Top notch customer Service</div>
+</div>
+
+</div>
+<div style="margin:5%;height: 400px;background-color: #32353c;" class="row">
+
+  <div class="col-lg-3" style="text-align: center;color:white;padding:40px">
+  <strong >Contact Info</strong>
+  <div style="color:gray;margin: 3%;">Phone : ######</div>
+  <div style="color:gray;margin: 3%;">Adress</div>
+  </div>
+  <div class="col-lg-3" style="text-align: center;color:white;padding:40px">
+    <strong >Get Help</strong>
+    <div style="color:gray;margin: 3%;">Delivery terms</div>
+    <div style="color:gray;margin: 3%;" >Terms and Condition</div>
+    <div style="color:gray;margin: 3%;">Return and Refunds</div>
+    <div style="color:gray;margin: 3%;">Privacy NOtice</div>
+    <div style="color:gray;margin: 3%;">Shopping FAQs</div>
+  </div>
+  <div class="col-lg-3" style="text-align: center;color:white;padding:40px">
+    <strong >Popular Catgories</strong>
+    <div style="color:gray;margin: 3%;">Shoes</div>
+    <div style="color:gray;margin: 3%;">Bags</div>
+    <div style="color:gray;margin: 3%;">Kurtas</div>
+    <div style="color:gray;margin: 3%;">Trousers</div>
+    <div style="color:gray;margin: 3%;">Shalwaar Qameez</div>
+  </div>
+  <div class="col-lg-3" style="text-align: center;color:white;padding:40px">
+    <strong >Lets stay in touch</strong>
+    <div style="color:gray;margin: 3%;">Top notch customer Service</div>
+    <div style="background-color: gray;">Your Email adress<strong >   Subscribe</strong></div>
+    <div style="color:gray;margin: 3%;">Keep up to datw with our latest news and special offers</div>
+  </div>
+<hr style="color: gray;">
+<div style="margin: 4%;color: whitesmoke;">@2020 ,AA Clothing Website made with passion</div>
+  </div>

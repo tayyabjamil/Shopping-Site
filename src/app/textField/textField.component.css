@@ -1,0 +1,19 @@
+
+.textFieldStling {
+    border-width: 1dp;
+    size: 10;
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.errorBorder{
+    border-width: 1dp;
+    border-color: red ;
+    border: 5%;
+    /* margin: 2%;   */
+}
+.errorlbl{
+    color: red;
+    font-family: 'Roboto';
+}

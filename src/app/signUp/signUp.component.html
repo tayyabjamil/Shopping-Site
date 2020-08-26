@@ -1,0 +1,55 @@
+
+<div style="margin-top:10%;margin-left: 40%;">
+  <img src="../assets/aagolden.png" style="padding-left: 4%;" width="150px" alt="">
+  <h1 style="color:#92856e" >Create your Accont</h1>
+</div>
+  <hr />
+  <div style="margin-left:40%">
+      <form >
+        <div class="form-group">
+          <h2> Username</h2>
+          <ns-textField name="username" class="textfieldBorderColor  font13" [rformgroup]="rformSignup"
+            rformControlName="username">
+          </ns-textField>
+
+
+        </div>
+        <div class="form-group">
+          <h2>Email</h2>
+          <ns-textField name="email" #txtEmail id="txtEmail" class="textfieldBorderColor  font13"
+            [rformgroup]="rformSignup" rformControlName="email">
+          </ns-textField>
+
+        </div>
+        <div class="form-group">
+          <h2>Password</h2>
+          <ns-textField name="password" #txtPassword id="txtPassword" type="password"
+            class="textfieldBorderColor  font13" [rformgroup]="rformSignup" rformControlName="password">
+          </ns-textField>
+
+
+        </div>
+        <div class="form-group">
+          <h2>Adress</h2>
+          <ns-textField name="adress"  type="text"
+            class="textfieldBorderColor  font13" [rformgroup]="rformSignup" rformControlName="adress">
+          </ns-textField>
+
+
+        </div>
+        <div class="form-group">
+          <h2>Contact No</h2>
+          <ns-textField name="contact"  type="number"
+            class="textfieldBorderColor  font13" [rformgroup]="rformSignup" rformControlName="contact">
+          </ns-textField>
+
+
+        </div>
+        
+        <button (click)='signUp()' type="submit"
+          style="width:200px;height: 40px;margin-top: 2%;background-color:#92856e">Signup </button>
+
+
+      </form>
+
+    </div>

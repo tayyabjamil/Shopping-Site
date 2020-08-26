@@ -1,0 +1,31 @@
+
+
+
+.container {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 800px;
+  height: 800px;
+  background-color: blueviolet;
+}
+
+.container-fluid {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 800px;
+  height: 800px;
+  background-color: red;
+}
+.left {
+  float: left;
+  width: 400px;
+  height: 500px;
+  background-color: beige;
+}
+.right {
+  float: right;
+  width: 400px;
+  height: 500px;
+  background-color: green;
+}
+

@@ -1,0 +1,37 @@
+
+<div style="margin-top:5%;margin-left: 45%;">
+  <img src="../assets/aagolden.png"  width="90px" alt="">
+  <h1 style="color:#92856e" >Orders</h1>  
+</div>
+  <hr />
+ 
+
+<div  class="row" *ngFor="let item of allOrders">
+  <h2 style="padding-left:40%;font-style: italic;color: #92856e;">Order by {{item?.username}}</h2>
+   
+  <div style="margin-left: 15%;margin-right: 15%; width:100%">
+    <div style="background-color: lightgrey;margin:3%;">
+    <div class="row" *ngFor="let item of item.cartData" >
+ 
+
+      <img style="padding-left: 2%;width: 40%; height: 40%;" [src]="'../assets/'+ item.image">
+      <div style="float: right;" class="col-lg-6">
+      <p style="font-size: large;font-weight: bold;">{{item?.title}}</p>
+      <p >Sample no  {{item?.sample}}</p>
+      <p >Price  {{item?.price}}</p>
+    </div>
+  </div>
+      <hr style="background-color: black;">
+      <h2>Total Bill   {{item?.total}}  Rs </h2>
+   
+   
+    </div>
+    <div>
+      <h2>Contact Information :<span style="color:#92856e"> {{item?.contact}}</span></h2>
+      <h2>Adress : <span style="color:#92856e">{{item?.adress}}</span></h2>
+    
+    </div>
+
+  </div>
+</div>
+ 

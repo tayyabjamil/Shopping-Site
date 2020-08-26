@@ -1,0 +1,28 @@
+
+<div style="margin-top:2%;margin-left: 45%;">
+  <img src="../assets/aagolden.png"  width="90px" alt="">
+  <h1 style="color:#92856e" >Cart</h1>
+</div>
+  <hr />
+ 
+<div class="container">
+
+<div style="margin-left: 15%;margin-right:15%" >
+<div  class="row" *ngFor="let item of data" style="padding:10px">
+  
+<img style="width: 30%; height: 30%;" [src]="'../assets/'+ item.image">
+<div style="float: right;" class="col-lg-6">
+      <p style="font-size: large;font-weight: bold;">{{item?.title}}</p>
+      <p >Sample no  {{item?.sample}}</p>
+      <p >Price  {{item?.price}}</p>
+    </div>
+   
+   </div>
+   <div >
+    <hr style="background-color: black;">
+<h2>Total Bill     {{this.totalamount}}  Rs </h2>
+  </div>
+
+  </div>
+<div><button (click)="sentOrder(data)" style="margin-left: 45%;">Confirm Order </button></div>
+</div>
